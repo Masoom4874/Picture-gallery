@@ -10,10 +10,7 @@ function App() {
   const { response, isLoading, error, fetchData } = useAxios(
     `search/photos?page=1&query=cars&client_id=${process.env.REACT_APP_ACCESS_KEY}`
   );
-  console.log(response);
-  // const getimage = () = {
-  //   axios.get("");
-  // }
+  
   const value = {
     response,
     isLoading,
