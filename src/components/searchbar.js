@@ -26,7 +26,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="home-page">
+    <div className="home-page py-5">
       <h3>Find Images</h3>
       <input
         className="mt-4 p-1"

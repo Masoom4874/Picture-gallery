@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* importing font-family from google fonts */
@@ -11,10 +12,10 @@
 font-family: 'Open Sans', sans-serif; */
 
 .home-page {
+  max-width: 100%;
   text-align: center;
-  padding-top: 40px;
+  -webkit-max-width: 100%;
   background-color: whitesmoke;
-  padding-bottom: 40px;
 }
 
 .Images h1 {
@@ -22,7 +23,7 @@ font-family: 'Open Sans', sans-serif; */
 }
 
 .container {
-  margin: auto;
+  width: fit-content;
   border: #fff solid 5px;
   background: #fff;
 }
@@ -40,6 +41,7 @@ img:hover {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 5px;
+  max-width: 100%;
 }
 
 @media only screen and (min-width: 750px) {
@@ -52,4 +54,10 @@ img:hover {
   .img-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+/* extra css */
+
+.img-container {
+  padding: 0.5rem;
 }

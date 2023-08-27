@@ -1,21 +1,31 @@
 import React from "react";
 
 const Image = ({ data }) => {
+  const handleButtonClick = () => {
+    if (data.links.download) {
+      window.open(data.links.download, "_blank");
+    }
+  };
   return (
-    <div>
+    <div className="img-container rounded-4 shadow-lg shadow-red m-2">
       <img
-        className="mx-5 my-5 px-2 py-2 object-fit-cover rounded-4 shadow-lg shadow-red"
-        width="400"
+        className="rounded-4 object-fit-cover text-center"
+        width="100%"
         height="400"
         src={data.urls.small}
         alt={data.alt_description}
       />
-      <div className="text-center ms-lg-5 ps-4">
+      <div className="text-center mt-2">
         <h5>{data.user.name}</h5>
-        <h6 className="">{data.alt_description}</h6>
-        <a href={data.links.download} target="_blank" rel="noopener noreferrer">
+        <h6 className="text-secondary">{data.alt_description}</h6>
+
+        <button
+          className="p-1 rounded "
+          type="button"
+          onClick={handleButtonClick}
+        >
           View
-        </a>
+        </button>
       </div>
     </div>
   );
